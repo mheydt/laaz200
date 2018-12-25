@@ -1,0 +1,14 @@
+/home/mike/Dev/LA/laaz200/storage/cosmosdb/bin/Debug/netcoreapp2.2/cosmosdb.deps.json
+/home/mike/Dev/LA/laaz200/storage/cosmosdb/bin/Debug/netcoreapp2.2/cosmosdb.runtimeconfig.json
+/home/mike/Dev/LA/laaz200/storage/cosmosdb/bin/Debug/netcoreapp2.2/cosmosdb.runtimeconfig.dev.json
+/home/mike/Dev/LA/laaz200/storage/cosmosdb/bin/Debug/netcoreapp2.2/cosmosdb.dll
+/home/mike/Dev/LA/laaz200/storage/cosmosdb/bin/Debug/netcoreapp2.2/cosmosdb.pdb
+/home/mike/Dev/LA/laaz200/storage/cosmosdb/obj/Debug/netcoreapp2.2/cosmosdb.csprojAssemblyReference.cache
+/home/mike/Dev/LA/laaz200/storage/cosmosdb/obj/Debug/netcoreapp2.2/cosmosdb.csproj.CoreCompileInputs.cache
+/home/mike/Dev/LA/laaz200/storage/cosmosdb/obj/Debug/netcoreapp2.2/cosmosdb.AssemblyInfoInputs.cache
+/home/mike/Dev/LA/laaz200/storage/cosmosdb/obj/Debug/netcoreapp2.2/cosmosdb.AssemblyInfo.cs
+/home/mike/Dev/LA/laaz200/storage/cosmosdb/obj/Debug/netcoreapp2.2/cosmosdb.dll
+/home/mike/Dev/LA/laaz200/storage/cosmosdb/obj/Debug/netcoreapp2.2/cosmosdb.pdb
+/home/mike/Dev/LA/laaz200/storage/cosmosdb/bin/Debug/netcoreapp2.2/Microsoft.Azure.Documents.ServiceInterop.dll
+/home/mike/Dev/LA/laaz200/storage/cosmosdb/bin/Debug/netcoreapp2.2/DocumentDB.Spatial.Sql.dll
+/home/mike/Dev/LA/laaz200/storage/cosmosdb/bin/Debug/netcoreapp2.2/cosmosdb.dll.config

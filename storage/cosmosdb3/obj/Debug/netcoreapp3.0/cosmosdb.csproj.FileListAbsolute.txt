@@ -1,0 +1,12 @@
+/home/mike/Dev/LA/laaz200/storage/cosmosdb/bin/Debug/netcoreapp3.0/cosmosdb
+/home/mike/Dev/LA/laaz200/storage/cosmosdb/bin/Debug/netcoreapp3.0/cosmosdb.deps.json
+/home/mike/Dev/LA/laaz200/storage/cosmosdb/bin/Debug/netcoreapp3.0/cosmosdb.runtimeconfig.json
+/home/mike/Dev/LA/laaz200/storage/cosmosdb/bin/Debug/netcoreapp3.0/cosmosdb.runtimeconfig.dev.json
+/home/mike/Dev/LA/laaz200/storage/cosmosdb/bin/Debug/netcoreapp3.0/cosmosdb.dll
+/home/mike/Dev/LA/laaz200/storage/cosmosdb/bin/Debug/netcoreapp3.0/cosmosdb.pdb
+/home/mike/Dev/LA/laaz200/storage/cosmosdb/obj/Debug/netcoreapp3.0/cosmosdb.csprojAssemblyReference.cache
+/home/mike/Dev/LA/laaz200/storage/cosmosdb/obj/Debug/netcoreapp3.0/cosmosdb.csproj.CoreCompileInputs.cache
+/home/mike/Dev/LA/laaz200/storage/cosmosdb/obj/Debug/netcoreapp3.0/cosmosdb.AssemblyInfoInputs.cache
+/home/mike/Dev/LA/laaz200/storage/cosmosdb/obj/Debug/netcoreapp3.0/cosmosdb.AssemblyInfo.cs
+/home/mike/Dev/LA/laaz200/storage/cosmosdb/obj/Debug/netcoreapp3.0/cosmosdb.dll
+/home/mike/Dev/LA/laaz200/storage/cosmosdb/obj/Debug/netcoreapp3.0/cosmosdb.pdb

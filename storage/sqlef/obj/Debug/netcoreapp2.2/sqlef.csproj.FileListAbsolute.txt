@@ -1,0 +1,11 @@
+/home/mike/Dev/LA/laaz200/storage/sqlef/bin/Debug/netcoreapp2.2/sqlef.deps.json
+/home/mike/Dev/LA/laaz200/storage/sqlef/bin/Debug/netcoreapp2.2/sqlef.runtimeconfig.json
+/home/mike/Dev/LA/laaz200/storage/sqlef/bin/Debug/netcoreapp2.2/sqlef.runtimeconfig.dev.json
+/home/mike/Dev/LA/laaz200/storage/sqlef/bin/Debug/netcoreapp2.2/sqlef.dll
+/home/mike/Dev/LA/laaz200/storage/sqlef/bin/Debug/netcoreapp2.2/sqlef.pdb
+/home/mike/Dev/LA/laaz200/storage/sqlef/obj/Debug/netcoreapp2.2/sqlef.csprojAssemblyReference.cache
+/home/mike/Dev/LA/laaz200/storage/sqlef/obj/Debug/netcoreapp2.2/sqlef.csproj.CoreCompileInputs.cache
+/home/mike/Dev/LA/laaz200/storage/sqlef/obj/Debug/netcoreapp2.2/sqlef.AssemblyInfoInputs.cache
+/home/mike/Dev/LA/laaz200/storage/sqlef/obj/Debug/netcoreapp2.2/sqlef.AssemblyInfo.cs
+/home/mike/Dev/LA/laaz200/storage/sqlef/obj/Debug/netcoreapp2.2/sqlef.dll
+/home/mike/Dev/LA/laaz200/storage/sqlef/obj/Debug/netcoreapp2.2/sqlef.pdb

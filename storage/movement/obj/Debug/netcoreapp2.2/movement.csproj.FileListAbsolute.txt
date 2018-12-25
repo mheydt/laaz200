@@ -1,0 +1,11 @@
+/home/mike/Dev/LA/laaz200/storage/movement/obj/Debug/netcoreapp2.2/movement.csprojAssemblyReference.cache
+/home/mike/Dev/LA/laaz200/storage/movement/obj/Debug/netcoreapp2.2/movement.csproj.CoreCompileInputs.cache
+/home/mike/Dev/LA/laaz200/storage/movement/obj/Debug/netcoreapp2.2/movement.AssemblyInfoInputs.cache
+/home/mike/Dev/LA/laaz200/storage/movement/obj/Debug/netcoreapp2.2/movement.AssemblyInfo.cs
+/home/mike/Dev/LA/laaz200/storage/movement/bin/Debug/netcoreapp2.2/movement.deps.json
+/home/mike/Dev/LA/laaz200/storage/movement/bin/Debug/netcoreapp2.2/movement.runtimeconfig.json
+/home/mike/Dev/LA/laaz200/storage/movement/bin/Debug/netcoreapp2.2/movement.runtimeconfig.dev.json
+/home/mike/Dev/LA/laaz200/storage/movement/bin/Debug/netcoreapp2.2/movement.dll
+/home/mike/Dev/LA/laaz200/storage/movement/bin/Debug/netcoreapp2.2/movement.pdb
+/home/mike/Dev/LA/laaz200/storage/movement/obj/Debug/netcoreapp2.2/movement.dll
+/home/mike/Dev/LA/laaz200/storage/movement/obj/Debug/netcoreapp2.2/movement.pdb
