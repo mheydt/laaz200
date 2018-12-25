@@ -1,0 +1,11 @@
+/home/mike/Dev/LA/laaz200/storage/DML/bin/Debug/netcoreapp2.1/DML.deps.json
+/home/mike/Dev/LA/laaz200/storage/DML/bin/Debug/netcoreapp2.1/DML.runtimeconfig.json
+/home/mike/Dev/LA/laaz200/storage/DML/bin/Debug/netcoreapp2.1/DML.runtimeconfig.dev.json
+/home/mike/Dev/LA/laaz200/storage/DML/bin/Debug/netcoreapp2.1/DML.dll
+/home/mike/Dev/LA/laaz200/storage/DML/bin/Debug/netcoreapp2.1/DML.pdb
+/home/mike/Dev/LA/laaz200/storage/DML/obj/Debug/netcoreapp2.1/DML.csprojAssemblyReference.cache
+/home/mike/Dev/LA/laaz200/storage/DML/obj/Debug/netcoreapp2.1/DML.csproj.CoreCompileInputs.cache
+/home/mike/Dev/LA/laaz200/storage/DML/obj/Debug/netcoreapp2.1/DML.AssemblyInfoInputs.cache
+/home/mike/Dev/LA/laaz200/storage/DML/obj/Debug/netcoreapp2.1/DML.AssemblyInfo.cs
+/home/mike/Dev/LA/laaz200/storage/DML/obj/Debug/netcoreapp2.1/DML.dll
+/home/mike/Dev/LA/laaz200/storage/DML/obj/Debug/netcoreapp2.1/DML.pdb

@@ -1,0 +1,11 @@
+/home/mike/Dev/LA/laaz200/storage/tables/obj/Debug/netcoreapp2.2/tables.csprojAssemblyReference.cache
+/home/mike/Dev/LA/laaz200/storage/tables/obj/Debug/netcoreapp2.2/tables.csproj.CoreCompileInputs.cache
+/home/mike/Dev/LA/laaz200/storage/tables/obj/Debug/netcoreapp2.2/tables.AssemblyInfoInputs.cache
+/home/mike/Dev/LA/laaz200/storage/tables/obj/Debug/netcoreapp2.2/tables.AssemblyInfo.cs
+/home/mike/Dev/LA/laaz200/storage/tables/bin/Debug/netcoreapp2.2/tables.deps.json
+/home/mike/Dev/LA/laaz200/storage/tables/bin/Debug/netcoreapp2.2/tables.runtimeconfig.json
+/home/mike/Dev/LA/laaz200/storage/tables/bin/Debug/netcoreapp2.2/tables.runtimeconfig.dev.json
+/home/mike/Dev/LA/laaz200/storage/tables/bin/Debug/netcoreapp2.2/tables.dll
+/home/mike/Dev/LA/laaz200/storage/tables/bin/Debug/netcoreapp2.2/tables.pdb
+/home/mike/Dev/LA/laaz200/storage/tables/obj/Debug/netcoreapp2.2/tables.dll
+/home/mike/Dev/LA/laaz200/storage/tables/obj/Debug/netcoreapp2.2/tables.pdb

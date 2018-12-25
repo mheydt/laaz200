@@ -4,13 +4,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Table;
-Rucc
+
 namespace LinuxAcademy.AZ200.StorageSamples
 {
     public class Tables
     {
         public static async Task demosAsync()
         {
+            
             var storageAccount = Common.getCloudStorageAccount();
             var tableClient = storageAccount.CreateCloudTableClient();
             var table = tableClient.GetTableReference("Customers");
@@ -89,6 +90,4 @@ namespace LinuxAcademy.AZ200.StorageSamples
             await table.ExecuteBatchAsync(batch);
         }
     }
-
-    // do metadata
 }
