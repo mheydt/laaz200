@@ -18,7 +18,7 @@ namespace cosmosdb
             try
             {
                 var p = new Program();
-                //p.BasicOperationsAsync().Wait();
+                p.BasicOperationsAsync().Wait();
             }
             catch (DocumentClientException de)
             {
@@ -33,7 +33,7 @@ namespace cosmosdb
             finally
             {
                 Console.WriteLine("End of demo, press any key to exit.");
-                Console.ReadKey();
+                //Console.ReadKey();
             }
         }
 
@@ -41,9 +41,9 @@ namespace cosmosdb
         {
             _client = new DocumentClient(new Uri(ConfigurationManager.AppSettings["accountEndpoint"]), ConfigurationManager.AppSettings["accountKey"]);
 
-            await _client.CreateDatabaseIfNotExistsAsync(new Database { Id = "WebOrders" });
+            await _client.CreateDatabaseIfNotExistsAsync(new Database { Id = "Users" });
 
-            await _client.CreateDocumentCollectionIfNotExistsAsync(UriFactory.CreateDatabaseUri("Orders"), new DocumentCollection { Id = "Orders" });
+            await _client.CreateDocumentCollectionIfNotExistsAsync(UriFactory.CreateDatabaseUri("Users"), new DocumentCollection { Id = "Orders" });
 
             await CreateEntitiesAsync();
 
@@ -60,7 +60,7 @@ namespace cosmosdb
         {
             Console.WriteLine(format, args);
             Console.WriteLine("Press any key to continue ...");
-            Console.ReadKey();
+            //Console.ReadKey();
         }
 
         private async Task CreateUserDocumentIfNotExistsAsync(string databaseName, string collectionName, User user)

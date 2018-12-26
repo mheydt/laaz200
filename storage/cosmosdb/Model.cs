@@ -4,7 +4,7 @@ namespace LinuxAcademy.AZ200.CosmosDbSample
 {
     public class Customer
     {
-        public string CustomerId { get; set; }
+        public string id { get; set; }
 
         public string Name { get; set; }
 
@@ -39,7 +39,8 @@ namespace LinuxAcademy.AZ200.CosmosDbSample
 
     public class Order
     {
-        public string OrderId { get; set; }
+        [JsonProperty("id")]
+        public string Id { get; set; }
         public Customer Customer { get; set; }
         public OrderItem[] OrderItems { get; set; }
         public Address ShipTo { get; set; }

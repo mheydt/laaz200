@@ -22,18 +22,15 @@ az sql db create `
   -n $dbName `
   --service-objective S0 
 
-USE masking;
-GO
-CREATE USER user1 WITHOUT LOGIN;
-GRANT SELECT ON OBJECT::dbo.Users TO user1;  
-GO
-
-
-USE masking;
-EXECUTE AS USER = 'user1';
-SELECT * FROM Users;
-
+CREATE TABLE laaz200dm.dbo.Users (
+  UserId int NOT NULL,
+  AccountCode varchar(50) NOT NULL,
+  Pin varchar(10) NOT NULL,
+  Name varchar(50) NOT NULL
+) GO;
+  
 INSERT INTO Users VALUES(1, '123-45-6789', 'ABCD', 'Mike')
+SELECT * FROM Users;
 
 New-AzureRmSqlDatabaseDataMaskingRule `
   -ServerName $serverName `
@@ -53,4 +50,15 @@ Remove-AzureRmSqlDatabaseDataMaskingRule `
   -SchemaName "dbo" `
   -TableName "Users" `
   -ColumnName "AccountCode" 
+
+USE masking;
+GO
+CREATE USER user1 WITHOUT LOGIN;
+GRANT SELECT ON OBJECT::dbo.Users TO user1;  
+GO
+
+USE masking;
+EXECUTE AS USER = 'user1';
+SELECT * FROM Users;
+REVERT;
   

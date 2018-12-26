@@ -1,0 +1,12 @@
+/home/mike/Dev/LA/laaz200/storage/redis/obj/Debug/netcoreapp2.1/redis.csprojAssemblyReference.cache
+/home/mike/Dev/LA/laaz200/storage/redis/obj/Debug/netcoreapp2.1/redis.csproj.CoreCompileInputs.cache
+/home/mike/Dev/LA/laaz200/storage/redis/obj/Debug/netcoreapp2.1/redis.AssemblyInfoInputs.cache
+/home/mike/Dev/LA/laaz200/storage/redis/obj/Debug/netcoreapp2.1/redis.AssemblyInfo.cs
+/home/mike/Dev/LA/laaz200/storage/redis/bin/Debug/netcoreapp2.1/redis.deps.json
+/home/mike/Dev/LA/laaz200/storage/redis/bin/Debug/netcoreapp2.1/redis.runtimeconfig.json
+/home/mike/Dev/LA/laaz200/storage/redis/bin/Debug/netcoreapp2.1/redis.runtimeconfig.dev.json
+/home/mike/Dev/LA/laaz200/storage/redis/bin/Debug/netcoreapp2.1/redis.dll
+/home/mike/Dev/LA/laaz200/storage/redis/bin/Debug/netcoreapp2.1/redis.pdb
+/home/mike/Dev/LA/laaz200/storage/redis/obj/Debug/netcoreapp2.1/redis.dll
+/home/mike/Dev/LA/laaz200/storage/redis/obj/Debug/netcoreapp2.1/redis.pdb
+/home/mike/Dev/LA/laaz200/storage/redis/bin/Debug/netcoreapp2.1/redis.dll.config

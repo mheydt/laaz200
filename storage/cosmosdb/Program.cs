@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Configuration;
 using System.Linq;
 using System.Threading.Tasks;
@@ -6,6 +7,7 @@ using System.Net;
 using Microsoft.Azure.Documents;
 using Microsoft.Azure.Documents.Client;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System.Collections.ObjectModel; 
 
 namespace LinuxAcademy.AZ200.CosmosDbSample
@@ -13,37 +15,65 @@ namespace LinuxAcademy.AZ200.CosmosDbSample
     class Program
     {
         private static DocumentClient _client;
+        private const string _databaseId = "SqlSample";
+        private const string _collectionId = "Families";
 
         static void Main(string[] args)
         {
             _client = new DocumentClient(new Uri(ConfigurationManager.AppSettings["accountEndpoint"]), 
                                                  ConfigurationManager.AppSettings["accountKey"]);
 
+            CreateDataAsync(_databaseId, _collectionId).Wait(); 
+            ExecuteSqlQuery(_databaseId, _collectionId, 
+            @"
+SELECT *
+FROM Families f
+WHERE f.id = 'AndersenFamily'
+");
+            ExecuteSqlQuery(_databaseId, _collectionId, 
+            @"
+SELECT {""Name"":f.id, ""City"":f.address.city} AS Family
+    FROM Families f
+    WHERE f.address.city = f.address.state
+");  
+            ExecuteSqlQuery(_databaseId, _collectionId, 
+            @"
+SELECT c.givenName
+    FROM Families f
+    JOIN c IN f.children
+    WHERE f.id = 'WakefieldFamily'
+    ORDER BY f.address.city ASC");  
 
-            //createData().Wait();            
+ //           ExecuteSqlQueryAsync(_databaseId, _collectionId, "SELECT * FROM Families f WHERE f.id = 'AndersenFamily'").Wait();
+            //GetDocumentByIdAsync(_databaseId, _collectionId, ).Wait();
+            //ReadUserDocumentAsync(_databaseId, _collectionId, "1").Wait();
             //executeLinqQuery("OnlineOrdering", "WebOrders");
             //executeSqlQuery("OnlineOrdering", "WebOrders");
-            executeJoinQuery("OnlineOrdering", "WebOrders");
+            //executeJoinQuery("OnlineOrdering", "WebOrders");
         }
 
-        private static async Task createData()
+        private static async Task CreateDataAsync(string databaseId, string collectionId)
         {
             await _client.CreateDatabaseIfNotExistsAsync(
                 new Database { 
-                    Id = "OnlineOrdering" 
+                    Id = databaseId
                 });
 
             await _client.CreateDocumentCollectionIfNotExistsAsync(
-                UriFactory.CreateDatabaseUri("OnlineOrdering"), 
+                UriFactory.CreateDatabaseUri(databaseId), 
                 new DocumentCollection 
                 { 
-                    Id = "WebOrders",
+                    Id = collectionId,
                     PartitionKey = new PartitionKeyDefinition() { 
-                        Paths = new Collection<string>(new [] { "/OrderId" })
+                        Paths = new Collection<string>(new [] { "/id" })
                     }
                 });
 
-                await CreateOrdersAsync();
+            var family1 = JObject.Parse(File.ReadAllText("data/andersen.json"));
+            var family2 = JObject.Parse(File.ReadAllText("data/wakefield.json"));
+
+            //await CreateDocumentIfNotExistsAsync(databaseId, collectionId, family1["id"].ToString(), family1);
+            await CreateDocumentIfNotExistsAsync(databaseId, collectionId, family2["id"].ToString(), family2);
 /* 
             await CreateEntitiesAsync();
 
@@ -57,11 +87,33 @@ namespace LinuxAcademy.AZ200.CosmosDbSample
 
         }
 
+        private static void ExecuteSqlQuery(string databaseId, string collectionId, string sql)
+        {
+            System.Console.WriteLine("SQL: " + sql);
+            // Set some common query options
+            var queryOptions = new FeedOptions { MaxItemCount = -1, EnableCrossPartitionQuery = true };
+
+            // Here we find nelapin via their LastName
+            var sqlQuery = _client.CreateDocumentQuery<JObject>(
+                    UriFactory.CreateDocumentCollectionUri(databaseId, collectionId),
+                    sql, queryOptions );
+
+            foreach (var result in sqlQuery)
+            {
+                Console.WriteLine(result);
+            }
+            //foreach (var order in orderQueryInSql)
+            //{
+              //  Console.WriteLine("\tRead {0}", order);
+            //}
+        }
+
+/* 
         private static async Task CreateOrdersAsync()
         {
             var order1 = new Order
             {
-                OrderId = "1",
+                Id = "1",
                 Customer = new Customer
                 {
                     CustomerId = "1",
@@ -95,7 +147,7 @@ namespace LinuxAcademy.AZ200.CosmosDbSample
 
             var order2 = new Order
             {
-                OrderId = "2",
+                Id = "2",
                 Customer = new Customer
                 {
                     CustomerId = "2",
@@ -119,33 +171,74 @@ namespace LinuxAcademy.AZ200.CosmosDbSample
 
             await CreateUserDocumentIfNotExistsAsync("OnlineOrdering", "WebOrders", order2);
         }
-
-        private static async Task CreateUserDocumentIfNotExistsAsync(
-            string databaseName, 
-            string collectionName,
-            Order order)
+*/
+        private static async Task CreateDocumentIfNotExistsAsync(
+            string databaseId, 
+            string collectionId,
+            string documentId,
+            JObject data)
         {
             try
             {
                 await _client.ReadDocumentAsync(UriFactory.CreateDocumentUri(
-                    databaseName, collectionName, order.OrderId), 
+                    databaseId, collectionId, documentId),
                     new RequestOptions { 
-                        PartitionKey = new PartitionKey(order.OrderId) 
-                });
-                Console.WriteLine($"Order {0} already exists in the database", order.OrderId);
+                        PartitionKey = new PartitionKey(documentId) 
+                    });
+                Console.WriteLine($"Order {documentId} already exists in the database");
             }
             catch (DocumentClientException de)
             {
                 if (de.StatusCode == HttpStatusCode.NotFound)
                 {
                     await _client.CreateDocumentAsync(
-                        UriFactory.CreateDocumentCollectionUri(databaseName, collectionName), order);
-                    Console.WriteLine($"Created Order {0}", order.OrderId);
+                        UriFactory.CreateDocumentCollectionUri(databaseId, collectionId), data);
+                    Console.WriteLine($"Created Order {documentId}");
                 }
                 else
                 {
                     throw;
                 }
+            }
+        }
+
+        private static async Task<string> GetDocumentByIdAsync(
+            string databaseId, 
+            string collectionId,
+            string documentId)
+        {
+            var response = await _client.ReadDocumentAsync(
+                UriFactory.CreateDocumentUri(databaseId, collectionId, documentId),
+                new RequestOptions { 
+                    PartitionKey = new PartitionKey(Undefined.Value) 
+                }
+            );
+
+            Console.WriteLine(response.Resource);
+
+            return "";
+        }
+
+        private static async Task<Order> ReadUserDocumentAsync(string databaseName, string collectionName, string orderId)
+        {
+            try
+            {
+                var result = await _client.ReadDocumentAsync(
+                    UriFactory.CreateDocumentUri(databaseName, collectionName, orderId), 
+                    new RequestOptions { PartitionKey = new PartitionKey(orderId) }
+                );
+
+                Console.WriteLine($"Read user {orderId}");
+
+                return null;
+            }
+            catch (DocumentClientException de)
+            {
+                if (de.StatusCode == HttpStatusCode.NotFound)
+                {
+                    Console.WriteLine($"User {orderId} not read");
+                }
+                throw;
             }
         }
 

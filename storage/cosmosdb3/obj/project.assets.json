@@ -5691,11 +5691,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/mike/Dev/LA/laaz200/storage/cosmosdb/cosmosdb.csproj",
+      "projectUniqueName": "/home/mike/Dev/LA/laaz200/storage/cosmosdb3/cosmosdb.csproj",
       "projectName": "cosmosdb",
-      "projectPath": "/home/mike/Dev/LA/laaz200/storage/cosmosdb/cosmosdb.csproj",
+      "projectPath": "/home/mike/Dev/LA/laaz200/storage/cosmosdb3/cosmosdb.csproj",
       "packagesPath": "/home/mike/.nuget/packages/",
-      "outputPath": "/home/mike/Dev/LA/laaz200/storage/cosmosdb/obj/",
+      "outputPath": "/home/mike/Dev/LA/laaz200/storage/cosmosdb3/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/home/mike/dotnet-sdk-2.2/sdk/NuGetFallbackFolder"

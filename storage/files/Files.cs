@@ -9,7 +9,7 @@ namespace LinuxAcademy.AZ200.StorageSamples
 {
     public class FileSamples
     {
-        static string _connectionString = "DefaultEndpointsProtocol=https;AccountName=laaz200stg;AccountKey=XT9jit6sY/iDU3VPnquj6N/jHoymAW7N9R/GPvP5ihoTTTm+9aExlQo9bNU7w84gKHIIPk4C+qPHKoRU5cpIBQ==;EndpointSuffix=core.windows.net";
+        static string _connectionString = "";
 
         private static string _shareName = "logs";
 
