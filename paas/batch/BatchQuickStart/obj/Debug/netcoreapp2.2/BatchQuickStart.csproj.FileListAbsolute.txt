@@ -1,0 +1,11 @@
+/home/mike/Dev/LA/laaz200/paas/batch/BatchQuickStart/bin/Debug/netcoreapp2.2/BatchQuickStart.deps.json
+/home/mike/Dev/LA/laaz200/paas/batch/BatchQuickStart/bin/Debug/netcoreapp2.2/BatchQuickStart.runtimeconfig.json
+/home/mike/Dev/LA/laaz200/paas/batch/BatchQuickStart/bin/Debug/netcoreapp2.2/BatchQuickStart.runtimeconfig.dev.json
+/home/mike/Dev/LA/laaz200/paas/batch/BatchQuickStart/bin/Debug/netcoreapp2.2/BatchQuickStart.dll
+/home/mike/Dev/LA/laaz200/paas/batch/BatchQuickStart/bin/Debug/netcoreapp2.2/BatchQuickStart.pdb
+/home/mike/Dev/LA/laaz200/paas/batch/BatchQuickStart/obj/Debug/netcoreapp2.2/BatchQuickStart.csprojAssemblyReference.cache
+/home/mike/Dev/LA/laaz200/paas/batch/BatchQuickStart/obj/Debug/netcoreapp2.2/BatchQuickStart.csproj.CoreCompileInputs.cache
+/home/mike/Dev/LA/laaz200/paas/batch/BatchQuickStart/obj/Debug/netcoreapp2.2/BatchQuickStart.AssemblyInfoInputs.cache
+/home/mike/Dev/LA/laaz200/paas/batch/BatchQuickStart/obj/Debug/netcoreapp2.2/BatchQuickStart.AssemblyInfo.cs
+/home/mike/Dev/LA/laaz200/paas/batch/BatchQuickStart/obj/Debug/netcoreapp2.2/BatchQuickStart.dll
+/home/mike/Dev/LA/laaz200/paas/batch/BatchQuickStart/obj/Debug/netcoreapp2.2/BatchQuickStart.pdb
